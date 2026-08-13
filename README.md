@@ -1,4 +1,4 @@
-﻿# SkyWarden ✈️
+# SkyWarden ✈️
 
 **AI-powered aerial image analysis that detects, identifies, and flags military aircraft in real time.**
 
@@ -139,6 +139,7 @@ YOLO_MODEL_PATH=/path/to/your/trained/model.pt
 
 ### Run the App
 
+Click the ▶️ **Play** button on `app.py` in VS Code, or run via terminal:
 ```bash
 streamlit run app.py
 ```
@@ -227,4 +228,4 @@ For questions, bug reports, or feature requests, please open an issue in this re
 |---|---|---|
 | Ashish Gautam | Project Maintainer | [@ashishsps20](https://github.com/ashishsps20) |
 | Arpan Pethkar | Core Contributor | [@Arpan01574](https://github.com/Arpan01574) |
-
+| Alok Kumar Shukla | Core Contributor | [@alok027-glitch](https://github.com/alok027-glitch) |
