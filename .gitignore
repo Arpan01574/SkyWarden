@@ -9,6 +9,7 @@ __pycache__/
 
 # Ignore virtual environments
 venv/
+.venv/
 env/
 
 # Ignore model weights and large files (if needed)
@@ -16,6 +17,7 @@ env/
 *.onnx
 *.h5
 models/
+test_aircraft_images/
 
 # Ignore VSCode settings
 .vscode/
@@ -26,6 +28,7 @@ models/
 # Ignore system-specific files
 .DS_Store
 Thumbs.db
+*.bat
 
 # Ignore log files
 *.log
