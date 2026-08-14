@@ -1,3 +1,35 @@
+import sys
+import os
+
+# Auto-redirect to project .venv streamlit if executed via python app.py
+_project_dir = os.path.dirname(os.path.abspath(__file__))
+_venv_streamlit = os.path.join(_project_dir, ".venv", "Scripts", "streamlit.exe")
+if os.path.exists(_venv_streamlit):
+    try:
+        from streamlit.runtime.scriptrunner import get_script_run_ctx
+        _in_streamlit = get_script_run_ctx() is not None
+    except Exception:
+        _in_streamlit = False
+
+    if not _in_streamlit and "streamlit" not in os.path.basename(sys.argv[0]).lower():
+        import socket
+        import subprocess
+        import webbrowser
+
+        def _is_port_in_use(port):
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                s.settimeout(0.5)
+                return s.connect_ex(('127.0.0.1', port)) == 0
+
+        target_port = 8501
+        if _is_port_in_use(target_port):
+            print(f"\n[OK] SkyWarden app is ALREADY running on http://localhost:{target_port}!")
+            print(f"[OK] Opening http://localhost:{target_port} in your browser...\n")
+            webbrowser.open(f"http://localhost:{target_port}")
+            sys.exit(0)
+
+        sys.exit(subprocess.call([_venv_streamlit, "run", os.path.abspath(__file__), "--server.port", str(target_port)] + sys.argv[1:]))
+
 import streamlit as st
 import cv2
 import torch
