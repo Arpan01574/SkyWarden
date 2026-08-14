@@ -43,7 +43,9 @@ from PIL import Image
 
 # Define path to your YOLO model
 load_dotenv()
-model_path = os.getenv("YOLO_MODEL_PATH")
+model_path = os.getenv("YOLO_MODEL_PATH") or os.path.join(os.path.dirname(os.path.abspath(__file__)), "models", "best.pt")
+if not os.path.isabs(model_path):
+    model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), model_path)
 
 # Load YOLO model
 model = YOLO(model_path)
