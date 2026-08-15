@@ -135,8 +135,9 @@ def display_image(image):
     st.image(img_bytes, use_container_width=True)
 
 def main():
-    st.title("🏺GuaRdIaNs oF ThE SkIeS")
-    st.subheader("Decode the Skies Like an Ancient Pharaoh")
+    st.set_page_config(page_title="SkyWarden - Aircraft Detection", page_icon="🛡️")
+    st.title("🛡️ SkyWarden")
+    st.subheader("Military Aircraft Detection & Friend-or-Foe Classification")
     uploaded_image = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png", "bmp", "tiff"])
 
     if uploaded_image is not None:
