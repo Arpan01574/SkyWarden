@@ -1,4 +1,4 @@
-﻿# SkyWarden ✈️
+# SkyWarden ✈️
 
 **AI-powered aerial image analysis that detects, identifies, and flags military aircraft in real time and process it.**
 
@@ -6,6 +6,7 @@
 ![YOLOv8](https://img.shields.io/badge/Model-YOLOv8-8A2BE2)
 ![Streamlit](https://img.shields.io/badge/App-Streamlit-FF4B4B)
 ![PyTorch](https://img.shields.io/badge/Backend-PyTorch-EE4C2C)
+![Documentation](https://img.shields.io/badge/docs-available-informational)
 
 SkyWarden is a computer-vision system that detects military aircraft in aerial images, classifies each as friendly or enemy, and raises an alert the moment a hostile aircraft is spotted.
 
@@ -156,6 +157,8 @@ Open the local URL Streamlit prints (typically `http://localhost:8501`), upload 
 ## Dataset
 
 Trained on the [Military Aircraft Detection Dataset](https://www.kaggle.com/datasets/a2015003713/militaryaircraftdetectiondataset/data) from Kaggle — 77 labeled aircraft classes spanning fighters, bombers, transports, helicopters, and UAVs, used for both detection (full frame) and classification (cropped) training.
+
+For complete class taxonomy, CSV and YOLO annotation schemas, and data partitioning details, refer to the [Dataset Documentation](docs/DATASET.md).
 
 ## Results
 
