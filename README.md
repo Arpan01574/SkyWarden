@@ -1,6 +1,6 @@
 ﻿# SkyWarden ✈️
 
-**AI-powered aerial image analysis that detects, identifies, and flags military aircraft in real time.**
+**AI-powered aerial image analysis that detects, identifies, and flags military aircraft in real time and process it.**
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
 ![YOLOv8](https://img.shields.io/badge/Model-YOLOv8-8A2BE2)
