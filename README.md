@@ -12,6 +12,7 @@ SkyWarden is a computer-vision system that detects military aircraft in aerial i
 
 ## Table of Contents
 
+- [Documentation Index](#documentation-index)
 - [Objective](#objective)
 - [Architecture](#architecture)
 - [Features](#features)
@@ -25,11 +26,25 @@ SkyWarden is a computer-vision system that detects military aircraft in aerial i
 - [Known Limitations](#known-limitations)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
+- [Security](#security)
+- [Changelog](#changelog)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 - [Citation](#citation)
 - [Support](#support)
 - [Contributors](#contributors)
+
+## Documentation Index
+
+Explore in-depth documentation guides for developers, operators, and researchers:
+
+- 🏗️ **[System Architecture & Pipeline Specification](docs/ARCHITECTURE.md)** — Architectural components, YOLOv8 topology, and SAM auto-annotation.
+- 📊 **[Dataset & Taxonomy Guide](docs/DATASET.md)** — Comprehensive breakdown of 77 military aircraft classes and annotation format conversions.
+- 🚀 **[Deployment & Production Guide](docs/DEPLOYMENT.md)** — Local setups, production Docker containers, and cloud deployments.
+- 🛠️ **[Troubleshooting & Diagnostics](docs/TROUBLESHOOTING.md)** — Fixes for PyTorch CUDA/MPS, OpenCV headless, and Streamlit issues.
+- 🤝 **[Contributing Guidelines](CONTRIBUTING.md)** — Development workflow, branching conventions, and commit formatting.
+- 🔒 **[Security Policy](SECURITY.md)** — Supported versions, vulnerability disclosures, and machine learning security practices.
+- 📜 **[Project Changelog](CHANGELOG.md)** — Detailed history of releases and milestone tracking.
 
 ## Objective
 
@@ -193,13 +208,21 @@ Training ran for 20 epochs on the full-frame detector. These are approximate val
 
 ## Contributing
 
-Contributions are welcome:
+Contributions are warmly welcomed! Please check out the full [Contributing Guide](CONTRIBUTING.md) for branch naming conventions, PR guidelines, and coding standards.
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m "Add your feature"`)
+3. Commit your changes (`git commit -m "feat: add your feature"`)
 4. Push to the branch (`git push origin feature/your-feature`)
 5. Open a pull request
+
+## Security
+
+For vulnerability disclosures and reporting procedures, review our [Security Policy](SECURITY.md).
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for a complete history of changes, version milestones, and roadmap items.
 
 ## License
 
@@ -230,4 +253,5 @@ For questions, bug reports, or feature requests, please open an issue in this re
 |---|---|---|
 | Ashish Gautam | Project Maintainer | [@ashishsps20](https://github.com/ashishsps20) |
 | Arpan Pethkar | Core Contributor | [@Arpan01574](https://github.com/Arpan01574) |
+| Alok Shukla | Contributor | [@alok027-glitch](https://github.com/alok027-glitch) |
 
