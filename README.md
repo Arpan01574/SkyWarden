@@ -1,16 +1,18 @@
 # SkyWarden ✈️
 
-**AI-powered aerial image analysis that detects, identifies, and flags military aircraft in real time.**
+**AI-powered aerial image analysis that detects, identifies, and flags military aircraft in real time and process it.**
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
 ![YOLOv8](https://img.shields.io/badge/Model-YOLOv8-8A2BE2)
 ![Streamlit](https://img.shields.io/badge/App-Streamlit-FF4B4B)
 ![PyTorch](https://img.shields.io/badge/Backend-PyTorch-EE4C2C)
+![Documentation](https://img.shields.io/badge/docs-available-informational)
 
 SkyWarden is a computer-vision system that detects military aircraft in aerial images, classifies each as friendly or enemy, and raises an alert the moment a hostile aircraft is spotted.
 
 ## Table of Contents
 
+- [Documentation Index](#documentation-index)
 - [Objective](#objective)
 - [Architecture](#architecture)
 - [Features](#features)
@@ -24,11 +26,25 @@ SkyWarden is a computer-vision system that detects military aircraft in aerial i
 - [Known Limitations](#known-limitations)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
+- [Security](#security)
+- [Changelog](#changelog)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 - [Citation](#citation)
 - [Support](#support)
 - [Contributors](#contributors)
+
+## Documentation Index
+
+Explore in-depth documentation guides for developers, operators, and researchers:
+
+- 🏗️ **[System Architecture & Pipeline Specification](docs/ARCHITECTURE.md)** — Architectural components, YOLOv8 topology, and SAM auto-annotation.
+- 📊 **[Dataset & Taxonomy Guide](docs/DATASET.md)** — Comprehensive breakdown of 77 military aircraft classes and annotation format conversions.
+- 🚀 **[Deployment & Production Guide](docs/DEPLOYMENT.md)** — Local setups, production Docker containers, and cloud deployments.
+- 🛠️ **[Troubleshooting & Diagnostics](docs/TROUBLESHOOTING.md)** — Fixes for PyTorch CUDA/MPS, OpenCV headless, and Streamlit issues.
+- 🤝 **[Contributing Guidelines](CONTRIBUTING.md)** — Development workflow, branching conventions, and commit formatting.
+- 🔒 **[Security Policy](SECURITY.md)** — Supported versions, vulnerability disclosures, and machine learning security practices.
+- 📜 **[Project Changelog](CHANGELOG.md)** — Detailed history of releases and milestone tracking.
 
 ## Objective
 
@@ -158,6 +174,8 @@ Open the local URL Streamlit prints (typically `http://localhost:8501`), upload 
 
 Trained on the [Military Aircraft Detection Dataset](https://www.kaggle.com/datasets/a2015003713/militaryaircraftdetectiondataset/data) from Kaggle — 77 labeled aircraft classes spanning fighters, bombers, transports, helicopters, and UAVs, used for both detection (full frame) and classification (cropped) training.
 
+For complete class taxonomy, CSV and YOLO annotation schemas, and data partitioning details, refer to the [Dataset Documentation](docs/DATASET.md).
+
 ## Results
 
 Training ran for 20 epochs on the full-frame detector. These are approximate values read from the training curves in `results/results.png`, not exact logged metrics — see `results/` for the full confusion matrix and PR/F1 curves.
@@ -191,13 +209,21 @@ Training ran for 20 epochs on the full-frame detector. These are approximate val
 
 ## Contributing
 
-Contributions are welcome:
+Contributions are warmly welcomed! Please check out the full [Contributing Guide](CONTRIBUTING.md) for branch naming conventions, PR guidelines, and coding standards.
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m "Add your feature"`)
+3. Commit your changes (`git commit -m "feat: add your feature"`)
 4. Push to the branch (`git push origin feature/your-feature`)
 5. Open a pull request
+
+## Security
+
+For vulnerability disclosures and reporting procedures, review our [Security Policy](SECURITY.md).
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for a complete history of changes, version milestones, and roadmap items.
 
 ## License
 
@@ -228,4 +254,5 @@ For questions, bug reports, or feature requests, please open an issue in this re
 |---|---|---|
 | Ashish Gautam | Project Maintainer | [@ashishsps20](https://github.com/ashishsps20) |
 | Arpan Pethkar | Core Contributor | [@Arpan01574](https://github.com/Arpan01574) |
-| Alok Kumar Shukla | Core Contributor | [@alok027-glitch](https://github.com/alok027-glitch) |
+| Alok Shukla | Contributor | [@alok027-glitch](https://github.com/alok027-glitch) |
+
