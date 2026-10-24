@@ -17,6 +17,8 @@ env/
 *.onnx
 *.h5
 models/
+!models/
+!models/best.pt
 test_aircraft_images/
 
 # Ignore VSCode settings
