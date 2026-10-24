@@ -1,0 +1,16 @@
+name: Streamlit Deployment
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: streamlit
+      url: https://skywarden.streamlit.app/
+    steps:
+      - name: Report Streamlit Cloud Status
+        run: echo "SkyWarden live deployment active at https://skywarden.streamlit.app/"

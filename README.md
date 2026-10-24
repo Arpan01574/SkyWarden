@@ -2,11 +2,14 @@
 
 **AI-powered aerial image analysis that detects, identifies, and flags military aircraft in real time and process it.**
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://skywarden.streamlit.app/)
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
 ![YOLOv8](https://img.shields.io/badge/Model-YOLOv8-8A2BE2)
 ![Streamlit](https://img.shields.io/badge/App-Streamlit-FF4B4B)
 ![PyTorch](https://img.shields.io/badge/Backend-PyTorch-EE4C2C)
 ![Documentation](https://img.shields.io/badge/docs-available-informational)
+
+> 🚀 **Live Interactive Demo:** Experience SkyWarden in real-time in your browser: **[skywarden.streamlit.app](https://skywarden.streamlit.app/)**
 
 SkyWarden is a computer-vision system that detects military aircraft in aerial images, classifies each as friendly or enemy, and raises an alert the moment a hostile aircraft is spotted.
 
